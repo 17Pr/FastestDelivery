@@ -1,0 +1,145 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/gif/png" href="img/z.png">
+	<title>Services</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link href="style.css" rel="stylesheet">
+
+    <style>
+        .logopic{
+	width: 50px;
+   height: 50px;
+   border-radius: 50%;
+}
+       .impic{
+        height:300px;
+        margin-bottom: 2%;
+       
+       }
+       
+       footer {
+background-color: rgb(5, 48, 5);
+color: #D5D5D5;
+padding-top: 1rem;
+text-align:center;
+
+}
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand text-warning font-weight-bold" href="#"><img src="projloga.webp" class="logopic" height="40">Fastest delivery</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+					<a href="{% url 'index' %}">Home</a>
+                           
+				</li>
+				
+				<li class="nav-item">
+					<a  class="nav-link" href="{% url 'services' %}">Be an transpoter</a>
+					
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{% url 'join' %}">Add Product</a>
+					
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{% url 'login' %}">Home</a></li>
+					
+				</li>
+			</ul>
+		</div>
+	</div>	
+	</nav>
+    <!-- End Navigation -->
+       
+    
+
+    <!-- Our Services -->
+  <br/><br/><br/><br/>
+<button type="button" class="btn btn-md btn-block btn-outline-success col-4 offset-4"  data-toggle="collapse" data-target="#join"><p class="display-4">Enable the service </p></button>
+  
+<div id="join" class="collapse">
+<div class="container">
+<form action="{% url 'services' %}" method="POST" id="services">
+{% csrf_token %}
+	<div class="form-group row">
+		<div class="col-6 offset-3">
+		    <br><label for="name">Your Name</label>
+			<input type="text" class="form-control" id="name" name="name" placeholder="Your name.." required><br>
+			<label for="email">Email</label>
+    			<input type="text" class="form-control" id="email" name="email" placeholder="Your email address.." required><br>
+			<label for="phone">Mobile</label>
+			<input type="text" class="form-control" id="phone" name="mobile" placeholder="Your mobile number.." required><br>
+            <label for="placeofpickup">Pick up from</label>
+    			<input type="text" class="form-control" id="place of pick up" name="pickup" placeholder="your pick up" required><br>
+                <label for="destination">destination</label>
+    			<input type="text" class="form-control" id="destination" name="destination" placeholder="place of pickup" required><br>	
+		
+				<select name="mode" required class="form-control">
+					<option>--select service--</option>
+					<option>Car</option>
+					<option>Bike</option>
+					<option>Auto</option>
+				</select>
+				<label for="product"> Number of products</label>
+				<select name="Enter no of products" required class="form-control">
+					<option>--select service--</option>
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+			    </select>
+				<label for="typeofproduct"> Type of product</label>
+				<select name="typeofproduct" required class="form-control">
+					<option>--select service--</option>
+					<option>Courier</option>
+					<option>Accessories</option>
+					<option>Do not disclose</option>
+			    </select>
+				<br>
+			<label for="subject">Message</label>
+			<textarea id="subject" class="form-control" name="subject" placeholder="Write your message to us.." style="height:100px" required></textarea><br>  
+			<button type="submit" name="Enable" class="btn btn-primary btn-raised">submit</button>
+
+		</div>
+	</div>
+</form>
+</div>
+</div>  
+<!--End Our sevices-->
+<br><br><br><br><br><br>          
+<!--- Footer -->
+<footer>
+	<div class="container-fluid ">
+	<div class="row font-weight-bold ">
+	
+	
+	<div class="col-12">
+		
+		<h5>&copy; Flying delivery Consulting </h5>
+		<p class="contact">Contact us: 444-666-1111 | Terms & Conditions | Privacy Policy</p>
+	</div>
+	
+	</div>
+	</div>
+	</footer>
+<!--- End Footer -->
+
+</body>
+</html>

@@ -1,0 +1,313 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/gif/png" href="img/z.png">
+        <title>Flying Delivery</title>
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>       
+        <link href="style.css" rel="stylesheet">
+        <style>
+
+            
+            .logopic{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                }
+            
+            .iframe{
+                width: 100%;
+                height: 350px;
+                }
+                
+            .table1{                
+                width:400px;
+                height:350px;
+                margin-left: auto;
+                margin-right: auto; 
+                padding-top: 0%; 
+                padding-bottom: 0%;
+                                           
+            }
+
+            .Gif{
+                width: 100%;
+                height: 95%;
+                padding: 5px;
+            }
+            
+            .Title{
+                font-size: 50px;
+                text-align: center;
+                font-weight: bold;
+                padding-top: 0%;
+                
+            }
+
+            .line{
+                border-top: 10px solid;
+                color: rgb(31, 31, 136);
+                width: 80%;
+                margin-top: 0px;
+            }
+
+           
+
+            .Box1{
+                
+                width: 50%;
+                height: 100%;
+                float: left;
+                text-align: left;
+                font-size: 19px;
+                padding-left: 70px;
+            }
+            .Box2{
+                
+                width: 50%;
+                height: 100%;
+                float:left;
+                text-align: center;
+            }
+
+            .aboutme{
+                
+                font-weight: bold;
+
+            }
+
+            .readme{
+                font-size: 16px;
+            }
+
+            .Also{
+	            font-size: 25px;
+	
+            }
+
+        
+            .Table1{
+                background-color:#4267B2;
+                width: 45px;
+                height: 45px;
+                float: left;
+                margin-right: 10px;
+                margin-left: 40%;
+                border-radius: 50%;
+                
+            }
+            .Table1 .fa-facebook{
+                font-size: 20px;
+                padding-top: 15px;
+                color: white;
+                
+            }
+            .Table2{
+                background-color:#00acee ;
+                width: 45px;
+                height: 45px;
+                float: left;
+                margin-right: 10px;
+                border-radius: 50%;
+               
+            }
+            .Table2 .fa-twitter{
+                font-size: 20px;
+                padding-top: 15px;
+                color: white;  
+                 
+            }
+            .Table3{
+                background-color:#0072b1;
+                width: 45px;
+                height: 45px;
+                float: left;
+                margin-right: 10px;
+                border-radius: 50%;
+                
+            }
+            .Table3 .fa-instagram{
+                font-size: 20px;
+                padding-top: 15px;
+                color: white;   
+                        
+            }
+            .Table4{
+                background-color:#DB4A39 ;
+                width: 45px;
+                height: 45px;
+                float: left;
+                margin-right: 10px;
+                border-radius: 50%;
+                
+            }
+            .Table4 .fa-google-plus{
+                font-size: 20px;
+                padding-top: 15px;
+                color: white;    
+                        
+            }
+            .Table5{
+                background-color:#bb0000;
+                width: 45px;
+                height: 45px;
+                margin-right: 10px;
+                float: left;
+                border-radius: 50%;
+                
+            }
+            .Table5 .fa-youtube{
+                font-size: 20px;
+                padding-top: 15px;
+                color: white; 
+                          
+            }
+
+            footer {
+                background-color: rgb(5, 48, 5);
+                color: #D5D5D5;
+                padding-top: 2rem;
+                text-align:center;
+                margin-top: 2%;
+
+            }
+                
+        </style>
+
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand text-warning font-weight-bold" href="#"><img src="{% static 'image/intern.jpg' %}"class="logopic" height="40" >FLYING DELIVERY</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="{% url 'index' %}">Home</a>
+                           
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a  class="nav-link" href="{% url 'services' %}">Be an transpoter</a>
+                            
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'join' %}">Add Product</a>
+                            
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'login' %}">Home</a>
+                            
+                        </li>
+                    </ul>
+                </div>
+            </div>	
+            </nav>
+        <!--End of Navigation-->
+
+        <!-- Add Map -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="container-fluid">
+	                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124738.36747329117!2d76.56564850248658!3d12.310804554391682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf70381d572ef9%3A0x2b89ece8c0f8396d!2sMysuru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1662881124843!5m2!1sen!2sin" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        <!--End Map-->
+
+        <br/>
+
+        <!--- Welcome Statement -->
+        <div class="Title">
+	        <p>Welcome to Flying Delivery</p>
+        </div>
+        <!--- End Welcome Statement -->
+
+        <!--Gif File Start-->
+        <div class="table1">           
+            <img src="{% static 'image/intern.jpg' %}" width="100%" alt="gif" class="Gif"/>
+        </div>
+        <!--End of Gif File Start -->
+        
+        <!--Start of hr line-->
+        <div class="col-12">
+            <hr class="line">            
+        </div>
+        <!--End of hr line-->
+
+        <!--About Us-->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="container-fluid">
+                        <div class="Box1">
+                            <h1 class="aboutme">ABOUT US</h1>
+                            <br/>
+                            <p>Our services was set up to provide efficient  management services to the each and every segment of the society.
+                             Delivery with security and service for sensitive products is our prime goal.And also the main goal is to provide the service to the public 
+                             with the help of public by working as a part-timer with their own shedules and giving them on time service which they needed not for the new Product but also the product, But the products which they forgot</p>
+                            <br/>
+                            <h5><span class="fa fa-truck"></span>   FAST DELIVERY</h5>
+                            <p class="readme">We provide efficient services to the each and every segment of the society.</p>
+                            <h5><span class="fa fa-shield"></span>  SECURED SERVICE</h5>
+                            <p class="readme">Delivery with security and service for sensitive products is our prime goal.</p>
+                            <h5><span class="fa fa-ship"></span>  SHIPPING</h5>
+                            <p class="readme">Shipping the products to reach the people which they forgot</p>         
+                        </div>
+    
+                        <div class="Box2">           
+                            <img src="{% static 'image/intern.jpg' %}" width="50%" alt="About us"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!--End of About us-->
+      
+        <!--Start of hr line-->
+        <div class="col-12">
+            <hr class="light-100">            
+        </div>
+        <!--End of hr line-->
+
+        <!--- Also visit us on -->        
+        <div class="container-fluid ">
+            <div class="row text-center ">
+                <div class="col-12">
+                    <h2 class="Also">Also visit us on:</h2><br/>
+                </div>
+                
+                <div class="col-12 social ">
+                    <div class="Table1"> <span class="fa fa-facebook" align="center"></span></div>
+                    <div class="Table2"><span class="fa fa-twitter" align="center"></span></div>
+                    <div class="Table3"><span class="fa fa-instagram" align="center"></span></div>
+                    <div class="Table4"><span class="fa fa-google-plus" align="center"></span></div>
+                    <div class="Table5"><span class="fa fa-youtube" align="center"></span></div> </div>
+                </div>   
+            </div>
+        </div>
+        <!--- Also visit us on -->
+
+        <!--- Footer -->
+        <footer>
+            <div class="container-fluid ">
+                <div class="row font-weight-bold ">  
+                    <div class="col-12">      
+                        <h5>&copy; Flying delivery Consulting </h5>
+                        <p class="contact">Contact us: 444-666-1111 | Terms & Conditions | Privacy Policy</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--- End Footer -->
+    </body>   
+</html>
